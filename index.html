@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-<html>
 	<head>
 		<meta charset="utf-8">
 		<title>Samson Qian</title>
@@ -13,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	</head>
 	<body>
+		<!--
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
@@ -21,27 +21,56 @@
         		<li><a href="/blog">Blog</a></li>
     		</ul>
 		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Samson!</h1>
-				<p>I'm a Data Scientist in<em>San Diego</em>.<a href="/about">Read more about my life here</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<!--
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
 		-->
+		<main class="container">
+			<section class="content">
+				<h1 align="center" class="mobile-only">Samson Qian</h1>
+				<a id="waddup2" href="https://github.com" title="Learn more about me!" class="waddupyo2">My resume</a>
+				<a class="waddupyo" id="waddup" style="margin-bottom:2%;" href="https://github.com" title="Learn more about me!">My resume</a>
+				<h1 align="center" class="desktop-only">Samson Qian</h1>
+				<p id="desc" style="margin-top:2.5%;" align="center" class="desktop-only"></p>
+				<p id="desc2" style="margin-top:2.5%;" align="center" class="desktop-only"></p>
+			</section>
+		</main>
 		<footer>
-			<a class="resume_button" href="https://github.com" target=newtab title="My resume."><img src="icon/icon_aboutme-sign.svg" height="50" width="50"></a>
-			<a class="resume_button" href="https://github.com" target=newtab title="Take a look at my GitHub!"><img src="icon/icon_github-sign.svg" height="50" width="50"></a>
-			<a class="resume_button" href="https://github.com" target=newtab title="Find me on LinkedIn!"><img src="icon/icon_linkedin-sign.svg" height="50" width="50"></a>
-			<a class="resume_button" href="https://github.com" target=newtab title="Find me on AngelList!"><img src="icon/icon_angellist-sign.svg" height="50" width="50"></a>
-			<a class="resume_button" href="https://github.com" title="Send me an email."><img src="icon/icon_goodreads-sign.svg" height="50" width="50"></a>
+			<a class="profile_button" href="https://github.com" target=newtab title="My resume."><img src="icon/icon_aboutme-sign.svg" height="50" width="50"></a>
+			<a class="profile_button" href="https://github.com/samsonq" target=newtab title="Take a look at my GitHub!"><img src="icon/icon_github-sign.svg" height="50" width="50"></a>
+			<a class="profile_button" href="https://linkedin.com/in/samsonq" target=newtab title="Find me on LinkedIn!"><img src="icon/icon_linkedin-sign.svg" height="50" width="50"></a>
+			<a class="profile_button" href="https://github.com" target=newtab title="Find me on AngelList!"><img src="icon/icon_angellist-sign.svg" height="50" width="50"></a>
+			<a class="profile_button" href="mailto:saqian@ucsd.edu" title="Send me an email."><img src="icon/icon_goodreads-sign.svg" height="50" width="50"></a>
 		</footer>
-
+		<script>
+			tippy('.resume_button', {
+				animation: 'fade',
+  			placement: 'top',
+				theme: 'gradient',
+				interactive: true,
+				distance: 30
+			})
+			tippy('.waddupyo', {
+				animation: 'fade',
+				placement: 'top',
+				theme: 'gradient',
+				interactive: true
+			})
+			tippy('.waddupyo2', {
+				animation: 'fade',
+				placement: 'top',
+				theme: 'gradient',
+				interactive: true
+			})
+			var showText = function (target, message, index, interval) {
+				if (index < message.length) {
+					$(target).append(message[index++]);
+					setTimeout(function () { showText(target, message, index, interval); }, interval);
+				}
+			}
+			$(function () {
+				showText("#desc", "Software Engineer, Mobile App Developer,", 0, 40);
+			});
+			setTimeout(function() {
+			  showText("#desc2", "Linux Enthusiast, IoT Novice", 0, 40);
+			}, 1975);
+		</script>
 	</body>
 </html>
