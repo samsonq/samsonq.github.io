@@ -25,8 +25,8 @@
 		<main class="container">
 			<section class="content">
 				<h1 align="center" class="mobile-only">Samson Qian</h1>
-				<a id="waddup2" href="https://github.com" title="Learn more about me!" class="waddupyo2">My resume</a>
-				<a class="waddupyo" id="waddup" style="margin-bottom:2%;" href="https://github.com" title="Learn more about me!">My resume</a>
+				<!--<a id="waddup2" href="https://github.com" title="Learn more about me!" class="waddupyo2">My resume</a>-->
+				<!--<a class="waddupyo" id="waddup" style="margin-bottom:2%;" href="https://github.com" title="Learn more about me!">My resume</a>-->
 				<h1 align="center" class="desktop-only">Samson Qian</h1>
 				<p id="desc" style="margin-top:2.5%;" align="center" class="desktop-only"></p>
 				<p id="desc2" style="margin-top:2.5%;" align="center" class="desktop-only"></p>
@@ -41,13 +41,14 @@
 			<a class="profile_button" href="mailto:saqian@ucsd.edu" title="Send Samson an Email"><img src="icons/mail.png" height="50" width="50"></a>
 		</footer>
 		<script>
-			tippy('.resume_button', {
+			tippy('.profile_button', {
 				animation: 'fade',
-  			placement: 'top',
+  			        placement: 'top',
 				theme: 'gradient',
 				interactive: true,
 				distance: 30
 			})
+			/*
 			tippy('.waddupyo', {
 				animation: 'fade',
 				placement: 'top',
@@ -60,6 +61,7 @@
 				theme: 'gradient',
 				interactive: true
 			})
+			*/
 			var showText = function (target, message, index, interval) {
 				if (index < message.length) {
 					$(target).append(message[index++]);
